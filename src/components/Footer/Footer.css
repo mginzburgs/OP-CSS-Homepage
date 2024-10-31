@@ -1,0 +1,9 @@
+.footer {
+  width: 100%;
+  font-size: var(--fs-s);
+  font-weight: var(--fw-light);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 20px;
+}

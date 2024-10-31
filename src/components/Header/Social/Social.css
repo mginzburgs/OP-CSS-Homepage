@@ -1,0 +1,36 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-left: auto;
+}
+
+.social-link {
+  display: inline-block;
+  max-width: 24px;
+  max-height: 24px;
+  cursor: pointer;
+}
+
+.social-link svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out, fill 1s ease;
+}
+
+.social-link:active svg {
+  transform: scale(0.95);
+}
+
+.social-link:hover svg {
+  fill: var(--accent-color);
+}
+
+@media (max-width: 730px) {
+  .social-link {
+    width: 16px;
+    height: 16px;
+  }
+}

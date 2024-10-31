@@ -1,0 +1,41 @@
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 300px));
+  gap: 20px;
+  justify-content: center;
+}
+
+.projects__card {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.488);
+  border-radius: 5px;
+  padding: 10px;
+
+  transition: background-color 1s ease, transform 1s ease;
+}
+
+.projects__card:hover {
+  background-color: rgba(255, 255, 255, 0.746);
+  transform: scale(1.01);
+}
+
+.card__img {
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 3px;
+}
+
+.card__heading {
+  font-size: var(--fs-l);
+  font-weight: var(--fw-light);
+  text-transform: uppercase;
+}
+
+.card__text {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-light);
+}

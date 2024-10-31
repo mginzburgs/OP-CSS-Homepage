@@ -1,0 +1,17 @@
+.logo {
+  max-width: 40px;
+  min-width: 40px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.logo svg {
+  width: 100%;
+  height: auto;
+}
+
+/* @media (max-width: 730px) {
+  .logo {
+    max-width: 20px;
+  }
+} */
