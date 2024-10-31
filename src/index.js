@@ -10,20 +10,14 @@ const routes = {
 };
 
 function router() {
-  const path = window.location.hash.slice(1) || "/"; 
+  const path = window.location.pathname === "" ? "/" : window.location.pathname;
   const app = document.getElementById("app");
 
   app.innerHTML = "";
 
   const pageComponent = routes[path];
-
-  if (typeof pageComponent === "function") {
-    app.append(pageComponent());
-  } else {
-    app.innerHTML = "<h1>404 - Page Not Found</h1>";
-  }
+  app.append(pageComponent());
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   router();
@@ -32,8 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.target.matches("[data-link]")) {
       event.preventDefault();
       const url = event.target.getAttribute("href");
-      window.location.hash = url; 
+      window.history.pushState(null, null, url);
+      router();
     }
   });
 
-  window.addEventListener("hashchange", router); 
+  window.addEventListener("popstate", router);
+});
